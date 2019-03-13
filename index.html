@@ -8,6 +8,18 @@
       <button>Load</button>
     </form>
     <p></p>
+
+    <button onclick="analytics.track('Product Viewed')">Track: Product Viewed</button>
+    <button onclick="analytics.track('Checkout Started')">Track: Checkout Started</button>
+    <button onclick="analytics.track('Coupon Denied')">Track: Coupon Denied</button>
+    <br/>
+    <button onclick="analytics.page('Home page')">Page: Home page</button>
+    <button onclick="analytics.page('About page')">Page: About page</button>
+    <button onclick="analytics.page('Contact page')">Page: Contact page</button>
+    <br/>
+    <button onclick="analytics.identify('fathy')">Identify: fathy</button>
+    <button onclick="analytics.identify('spongebob')">Identify: spongebob</button>
+
     <script>
       const {searchParams} = new URL(document.location)
       const writeKey = searchParams.get('writeKey')
